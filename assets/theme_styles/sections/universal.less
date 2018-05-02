@@ -1,0 +1,58 @@
+.body-font {
+  font-family: "Open Sans", sans-serif;
+}
+.title-font {
+  font-family: "HIND", sans-serif;
+}
+
+
+body {
+  .body-font;
+  background: @background;
+  word-wrap: break-word;
+}
+.mega-container {
+  background: white;
+  max-width: 1170px;
+  margin: auto;
+  margin-top: 20px;
+  overflow: visible;
+}
+a {
+  color: @accent;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    color: @accent;
+  }
+}
+.container {
+  margin: auto;
+  max-width: 1170px;
+}
+
+
+#content {
+  margin-top: 30px;
+  padding-top: 30px;
+}
+#main {
+  overflow: auto;
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+}
+#primary .section-title span {
+  padding-left: 0;
+}
+
+.centered {
+  text-align:center;
+}
+
+.section-title {
+  text-align: center;
+  color: @content;
+  font-size: 40px;
+  margin: 30px 0;
+}

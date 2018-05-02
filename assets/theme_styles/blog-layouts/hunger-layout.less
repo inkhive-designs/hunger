@@ -1,0 +1,85 @@
+.hunger {
+  border-bottom: none;
+  position: relative;
+  overflow: auto;
+  -webkit-perspective: 500;
+  perspective: 500;
+  min-height: 144px;
+  .featured-thumb {
+    background: @pattern repeat;
+    border:none;
+    border-radius: 1px;
+    padding: 0px;
+    position: relative;
+    box-shadow: 0px 7px 2px -6px fade(black, 30%);
+    .transition(0.4s all ease);
+    transform-origin: bottom;
+    img {
+      width: 100%;
+    }
+    &:hover {
+      img {
+        .transform(none);
+      }
+
+    }
+  }
+  .out-thumb {
+    position: relative;
+    margin-top: 25px;
+    padding: 0;
+    .postedon {
+      background: @accent;
+      padding: 10px 15px;
+      color: @onaccent;
+      text-align: center;
+      .date {
+        font-size: 35px;
+        font-weight: 600;
+      }
+      .month {
+        font-size: 15px;
+      }
+    }
+    .entry-content {
+      margin: 0;
+      h1.entry-title {
+        font-size: 18px;
+        font-weight: 600;
+        text-align: left;
+        a {
+          color: lighten(black, 10%);
+          line-height: 1.3em;
+        }
+      }
+      .entry-excerpt {
+        text-align: left;
+      }
+      .readmore {
+        margin-left: 35px;
+        padding: 20px 0;
+        &:before {
+          display:block;
+          content: "";
+          width: 20px;
+          height: 2px;
+          position: absolute;
+          left: 16px;
+          bottom: 30px;
+          background: @s-accent;
+        }
+        a {
+          font-size: 15px;
+          color: grey;
+          &:hover {
+            color: @accent;
+          }
+          &:active {
+            color: @accent;
+          }
+        }
+      }
+    }
+  }
+
+}
