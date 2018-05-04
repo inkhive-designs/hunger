@@ -18,7 +18,7 @@
 	            <h1 class="title">
 	                <?php the_title(); ?>
 	            </h1>
-                <?php if(get_theme_mod('hunger_hero1_full_content', true)) : ?>
+                <?php if(get_theme_mod('hunger_hero1_full_content', false)) : ?>
                     <div class="excerpt">
                         <?php the_content(); ?>
                     </div>

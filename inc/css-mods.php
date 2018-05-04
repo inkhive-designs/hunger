@@ -16,15 +16,15 @@ function hunger_custom_css_mods() {
 
 
 	if ( get_background_color() ) {
-		echo "#social-search .searchform:before { border-left-color: #".get_background_color()." }";
+		echo "#social-  search .searchform:before { border-left-color: #".get_background_color()." }";
 		echo "#social-search .searchform, #social-search .searchform:after { background: #".get_background_color()." }";
 	}
 	
-	if ( get_theme_mod('hunger_title_font','HIND') ) :
+	if ( get_theme_mod('hunger_title_font','Raleway') ) :
 		echo ".title-font, h1, h2 { font-family: ".esc_html(get_theme_mod('hunger_title_font'))."; }";
 	endif;
 	
-	if ( get_theme_mod('hunger_body_font','Open Sans') ) :
+	if ( get_theme_mod('hunger_body_font','Khula') ) :
 		echo "body { font-family: ".esc_html(get_theme_mod('hunger_body_font'))."; }";
 	endif;
 

@@ -16,7 +16,7 @@
                 $args = array(
                     'post_type' => 'post',
                     'posts_per_page' => 12,
-                    //'cat'  => esc_html( get_theme_mod('hunger_delta_cat',0) ),
+                    'cat'  => esc_html( get_theme_mod('hunger_eta_cat',0) ),
                     'ignore_sticky_posts' => 1,
                 );
                 $loop = new WP_Query( $args );

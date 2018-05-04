@@ -15,7 +15,6 @@ function hunger_pagination() {
     if( is_array($page_format) ) {
         $paged = ( get_query_var('paged') == 0 ) ? 1 : get_query_var('paged');
         echo '<div class="pagination"><div>';
-        echo '<span>'. $paged . ' of ' . $wp_query->max_num_pages .'</span>';
         foreach ( $page_format as $page ) {
             echo $page;
         }

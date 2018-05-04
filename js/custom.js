@@ -29,14 +29,14 @@ jQuery(document).ready( function() {
         jQuery(this).find("ul").slideToggle('slow');
     });
 
-	jQuery('.nav-tabs li').click(function(){
-		var cat = jQuery(this).attr("class");
-	});
-    if(jQuery("article").hasClass("category-" + jQuery(this).attr("class"))) {
-        jQuery("article").show();
-    }else {
-        jQuery("article").hide();
-    }
+    // jQuery('.nav-tabs li').click(function(){
+		// var cat = jQuery(this).attr("class");
+    // });
+    // if(jQuery("article").hasClass("category-" + jQuery(this).attr("class"))) {
+    //     jQuery("article").show();
+    // }else {
+    //     jQuery("article").hide();
+    // }
 });
 
 jQuery(window).load(function() {

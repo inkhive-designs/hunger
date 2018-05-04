@@ -3,19 +3,44 @@
     .section-title {
       font-size: 35px;
       text-align:left;
+      margin: 17px 0;
     }
   }
-  .item {
-    .post-cats {
-      float:right;
-      .cat-filter {
-        padding: 10px 20px;
+  .cat-top {
+    overflow: auto;
+    border-bottom: 1px solid #ebebeb;
+    margin: 30px 0;
+    .item {
+      &:after {
+        content: "";
+        background-image: url("../../images/scooter.png");
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        bottom: 0;
+        left: 52px;
+        background-size: cover;
+      }
+      .post-cats {
+        float:right;
+        .cat-filter {
+          padding: 30px 15px;
+          display: inline-block;
+          font-size: 17px;
+        }
       }
     }
   }
   .featured-thumb {
-    .tab-pane {
-      overflow: auto;
+    padding: 0;
+    .categorized-posts {
+      display: flex;
+      flex-wrap: wrap;
+      .out-thumb {
+        h2 {
+          font-size: 18px;
+        }
+      }
     }
   }
 }

@@ -61,6 +61,7 @@ $wp_customize->add_section('hunger_hero1_section',
 
     $wp_customize->add_setting('hunger_hero1_full_content',
         array(
+            'default' => false,
             'sanitize_callback' => 'hunger_sanitize_checkbox'
         )
     );

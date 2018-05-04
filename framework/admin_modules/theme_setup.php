@@ -79,6 +79,7 @@ if ( ! function_exists( 'hunger_setup' ) ) :
         ) ) );
 
         add_image_size('hunger-pop-thumb',542, 340, true );
+        add_image_size('hunger-cat-thumb',260, 180, true );
         add_image_size('hunger-featpost-thumb',542, 542, true );
         add_image_size('hunger-thumb',670, 430, true );
         add_image_size('offer-thumb',300, 300, true );

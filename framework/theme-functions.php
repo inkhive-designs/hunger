@@ -115,9 +115,9 @@ function hunger_ajax_filter_get_posts( $taxonomy ) {
     $args = array(
         'category_name' => $taxonomy,
         'post_type' => 'post',
-        'posts_per_page' => 10,
+        'posts_per_page' => 4,
     );
-    echo $taxonomy;
+    //echo $taxonomy;
     // If taxonomy is not set, remove key from array and get all posts
     if( !$taxonomy ) {
         unset( $args['tag'] );
@@ -127,10 +127,20 @@ function hunger_ajax_filter_get_posts( $taxonomy ) {
 
     if ( $query->have_posts() ) :
         while ( $query->have_posts() ) :  $query->the_post(); ?>
-            <h2>
-                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-            </h2>
-            <?php the_excerpt(); ?>
+
+            <div class="feat-thumb col-md-3 col-sm-6 col-xs-12">
+                <?php if(has_post_thumbnail()):
+                    the_post_thumbnail('hunger-cat-thumb');
+                else: ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder2.jpg" />
+                <?php endif; ?>
+                <div class="out-thumb">
+
+                    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                    <?php echo substr(get_the_excerpt(), 0, 170)."..."; ?>
+
+                </div>
+            </div>
 
         <?php endwhile; ?>
     <?php else: ?>
@@ -142,3 +152,10 @@ function hunger_ajax_filter_get_posts( $taxonomy ) {
 
 add_action('wp_ajax_filter_posts', 'hunger_ajax_filter_get_posts');
 add_action('wp_ajax_nopriv_filter_posts', 'hunger_ajax_filter_get_posts');
+
+//Function to get slug from cat id
+function get_cat_slug($cat_id) {
+    $cat_id = (int) $cat_id;
+    $category = get_category($cat_id);
+    return $category->slug;
+}

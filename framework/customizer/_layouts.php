@@ -19,7 +19,9 @@ function hunger_customize_register_design_layouts( $wp_customize ){
 
     $wp_customize->add_setting(
         'hunger_blog_layout',
-        array( 'sanitize_callback' => 'hunger_sanitize_blog_layout' )
+        array(
+            'default'   => 'hunger',
+            'sanitize_callback' => 'hunger_sanitize_blog_layout' )
     );
 
     function hunger_sanitize_blog_layout( $input ) {
@@ -71,7 +73,9 @@ function hunger_customize_register_design_layouts( $wp_customize ){
 
     $wp_customize->add_setting(
         'hunger_disable_sidebar_home',
-        array( 'sanitize_callback' => 'hunger_sanitize_checkbox' )
+        array(
+            'default' => true,
+            'sanitize_callback' => 'hunger_sanitize_checkbox' )
     );
 
     $wp_customize->add_control(

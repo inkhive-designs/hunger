@@ -21,8 +21,6 @@ get_template_part('modules/header/head'); ?>
 
     <?php get_template_part('framework/featured-components/featured', 'offers'); ?>
 
-    <?php get_template_part('framework/featured-components/featured', 'restro'); ?>
-
     <?php get_template_part('framework/featured-components/featured', 'cat'); ?>
 
     <?php get_template_part('modules/hero/hero', 'top'); ?>
