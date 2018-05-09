@@ -148,8 +148,8 @@ jQuery(document).ready( function() {
 
 jQuery('.mobile-menu ul.sub-menu').hide();
 
-jQuery('.mobile-menu li.menu-item-has-children > a').click(function(){
-    jQuery('ul.sub-menu').slideToggle('slow','swing');
+jQuery('.mob_menu > li.menu-item-has-children').click(function(){
+    jQuery(this).find('ul').slideToggle('slow','swing');
 });
 
 //prevent menu link (BigSlide)

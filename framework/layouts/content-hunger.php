@@ -16,6 +16,7 @@
     </div><!--.featured-thumb-->
 
     <div class="out-thumb col-md-12 col-sm-12">
+
         <div class="postedon col-md-3">
             <div class="date"><?php echo get_the_time( 'j' ); ?></div>
             <div class="month"><?php echo get_the_time( 'F' ); ?></div>

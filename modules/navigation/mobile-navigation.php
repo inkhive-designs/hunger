@@ -19,5 +19,5 @@
     </div>
     <?php
     // Get the Appropriate Walker First.
-    wp_nav_menu( array( 'theme_location' => 'mobile') ); ?>
+    wp_nav_menu( array( 'theme_location' => 'mobile', 'menu_class' => 'mob_menu') ); ?>
 </nav><!-- #site-navigation -->
