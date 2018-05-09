@@ -2,7 +2,7 @@
 function hunger_customize_register_design_layouts( $wp_customize ){
     // Layout and Design
     $wp_customize->get_section('background_image')->panel = 'hunger_design_panel';
-    $wp_customize->add_panel( 'hunger_design_layouts_panel', array(
+    $wp_customize->add_panel( 'hunger_design_panel', array(
         'priority'       => 40,
         'title'          => __('Design & Layout','hunger'),
     ) );
@@ -12,7 +12,7 @@ function hunger_customize_register_design_layouts( $wp_customize ){
         array(
             'title'     => __('Blog Layout','hunger'),
             'priority'  => 0,
-            'panel'     => 'hunger_design_layouts_panel'
+            'panel'     => 'hunger_design_panel'
         )
     );
 
@@ -52,7 +52,7 @@ function hunger_customize_register_design_layouts( $wp_customize ){
         array(
             'title'     => __('Sidebar Layout','hunger'),
             'priority'  => 0,
-            'panel'     => 'hunger_design_layouts_panel'
+            'panel'     => 'hunger_design_panel'
         )
     );
 
@@ -145,7 +145,7 @@ function hunger_customize_register_design_layouts( $wp_customize ){
             'title'			=> __('Custom Footer Text','hunger'),
             'description'	=> __('Enter your Own Copyright Text.','hunger'),
             'priority'		=> 11,
-            'panel'			=> 'hunger_design_layouts_panel'
+            'panel'			=> 'hunger_design_panel'
         )
     );
 

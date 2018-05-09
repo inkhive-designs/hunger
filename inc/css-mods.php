@@ -20,7 +20,7 @@ function hunger_custom_css_mods() {
 		echo "#social-search .searchform, #social-search .searchform:after { background: #".get_background_color()." }";
 	}
 	
-	if ( get_theme_mod('hunger_title_font','Raleway') ) :
+	if ( get_theme_mod('hunger_title_font','Nunito') ) :
 		echo ".title-font, h1, h2 { font-family: ".esc_html(get_theme_mod('hunger_title_font'))."; }";
 	endif;
 	
@@ -59,19 +59,12 @@ function hunger_custom_css_mods() {
                 }";
     endif;
 
-    if (get_theme_mod('hunger_hero_background_image')) :
-        $image1 = get_theme_mod('hunger_hero2_background_image');
-        echo "#hero2 {
-                    background-image: url('" . $image1 . "');
-                    background-size: cover;
-                }";
-    endif;
-
     if (get_theme_mod('hunger-sbg-img')) :
         $image2 = get_theme_mod('hunger-sbg-img');
         echo "#showcase-wrapper {
                     background-image: url('" . $image2 . "');
                     background-size: cover;
+                    background-position-x: center;
                 }";
     endif;
 

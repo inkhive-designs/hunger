@@ -1,48 +1,133 @@
 /* -------- Nav Menu ---------- */
+.navigation-area {
+  box-shadow: 0 2px 5px -2px @accent;
+}
 #site-navigation {
+  .mega-item {
+    padding: 0;
+  }
   ul {
     list-style: none;
     margin-left: 0;
     padding-left: 5px;
-    li.menu-item-has-children {
-      a {
-        &:after {
-          content: "\f0da";
-          font-family: "Font Awesome 5 Free";
-          font-weight: 900;
-          margin-left: 5px;
-        }
+    li.menu-item-has-children > a {
+      &:after {
+        content: "\f0da";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        margin-left: 5px;
       }
     }
     li {
-      display: block;
-      padding: 10px;
-      &:nth-child(odd) {
-        float:left;
-        width: 50%;
+      position: relative;
+      a {
+        color: black;
+        padding: 10px;
+        display: block;
       }
-      &:nth-child(even) {
-        float:right;
-        width: 50%;
+      .sub-menu {
+        opacity: 0;
+        visibility: hidden;
+        text-align: left;
+        position: absolute;
+        left: 100%;
+        top: 0;
+        width: 100%;
+        padding: 0;
+        background: @onaccent;
+        border: 1px solid @accent;
+        border-radius: 3px;
+        ul {
+          left: 100%;
+          opacity: 0;
+          top: 0;
+        }
+      }
+      &:hover {
+        background: @accent;
+        border-radius: 3px;
+        .sub-menu {
+          visibility: visible;
+        }
+      }
+    }
+    li:hover > a {
+      background: @accent;
+      color: white;
+    }
+  }
+  ul li {
+    &:hover > ul {
+      visibility: visible;
+      opacity: 1;
+      background: @onaccent;
+      box-shadow: none;
+      li {
+        a {
+          text-transform: none;
+        }
       }
     }
   }
+
+
   .menu {
     width: 50%;
     display: inline-block;
     float:left;
+    margin: 8px 0;
   }
   .cat-menu {
     #site-logo {
       max-height: none;
+      margin: 8px 0;
       img {
         width: 200px;
         height: auto;
         max-height: none;
       }
     }
+    #text-title-desc {
+      .site-description {
+        font-size: 20px;
+      }
+    }
+    .menu-category {
+      display: flex;
+      flex-wrap: wrap;
+      .item {
+        padding: 10px;
+        .featured-thumb {
+          position: relative;
+          h3 {
+            position: absolute;
+            text-align: center;
+            top: 15px;
+            left: 0;
+            right: 0;
+            font-size: 15px;
+            font-weight: 600;
+            a {
+              color: @onaccent;
+              &:hover, &:visited {
+                color: @onaccent;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
+@media screen and (max-width: 991px) {
+  .btn {
+    display: none;
+  }
+  .navigation-area {
+    display: none;
+  }
+}
+
 #short-navigation {
   float: right;
   width: auto;
@@ -50,6 +135,9 @@
   display: inline-block;
   padding: 11px 2px;
   ul {
+    @media screen and (min-width: 202px) {
+      display: inline-block;
+    }
     li {
       float: left;
       margin-left: 5px;
@@ -105,18 +193,6 @@
       color: @onaccent;
     }
   }
-  .fa {
-    padding: 0 5px 0 0;
-  }
-  .menu-desc {
-    font-size: 12px;
-    font-weight: 300;
-    color: #eee;
-    display: inline-block;
-    margin-top: -5px;
-    font-style: italic;
-    text-transform: lowercase;
-  }
   .current_page_item > a,
   .current-menu-item > a,
   .current_page_ancestor > a {
@@ -128,51 +204,97 @@
     text-align: center;
     width: 100%;
     padding: 0;
-    .td_mobile_menu_wrap {
-      min-height: 42px;
-      padding: 20px;
-      margin-bottom: 20px;
-      position: relative;
-      min-width: 150px;
-      display: inline-block;
-      &:after {
-        content: "\f103";
-        font-family: "FontAwesome";
-        color: white;
-        position: absolute;
-        right: 27px;
-        top: 23px;
-        font-size: 18px;
-      }
-    }
-    .mobileMenu {
-      padding: 5px 8px;
-      border: none;
-      box-shadow: none;
-      background: fade(black, 50%);
-      color: white;
-      min-width: 150px;
-      background-image: none;
-      -webkit-appearance: none;
-      position: relative;
-      &:focus {
-        outline: none;
-      }
-    }
   }
 }
 
-.color-dark {
-  ul li a {
-    color: darken(@content,10%);
-  }
-}
 
-.color-light {
-  ul li a {
-    color: white !important;
-    font-weight: 800 !important;
-    text-shadow: 1px 1px black;
+/**
+Mobile Menu
+ */
+.mobile-menu {
+  a {
+    font-size: 40px;
+  }
+  @media screen and (min-width: 991px) {
+    display: none;
+  }
+
+  .menu-link {
+
+  }
+  #menu {
+    z-index: 9999;
+    overflow-y: auto;
+    box-shadow: 2px 2px 1px darken(@accent, 40%);
+    .mobile-menu-logo {
+      overflow: auto;
+      text-align: center;
+      margin-top: 20px;
+      .site-branding {
+        float: none;
+        text-align: center;
+        #site-logo {
+          max-height: none;
+          margin-right: 0;
+          img {
+            max-height: none;
+            width: 130px;
+            height: auto;
+          }
+        }
+        #text-title-desc {
+          .site-description {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    #social-icons {
+      margin-bottom: 10px;
+      padding: 10px 0;
+      a {
+        font-size: 20px;
+        color: @accent;
+      }
+    }
+    .menu{
+      margin-left: 0;
+      padding-left: 0;
+      .sub-menu {
+        margin-left: 0;
+        padding-left: 0;
+      }
+      li {
+        list-style: none;
+        text-align: center;
+        position: relative;
+        &:before {
+          content: "";
+          position: absolute;
+          height: 10px;
+          width: 86%;
+          top: 11px;
+          left: 20px;
+          border-bottom: 2px dotted @accent;
+        }
+        a {
+          background: white;
+          position: relative;
+          display: inline-block;
+          padding: 10px 15px;
+          text-align: center;
+          font-size: 15px;
+        }
+      }
+      li.menu-item-has-children > a {
+        &:after {
+          content: "\f067";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          margin-left: 10px;
+        }
+      }
+    }
   }
 }
 

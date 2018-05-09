@@ -1,19 +1,69 @@
 /* Footer Sidebar */
 #footer-sidebar {
   @footer-bg: @sbg;
-  background: @footer-bg;
-  border-top: solid 4px darken(@s-accent,10%);
-  box-shadow: 0px -40px 0px @s-accent;
+  background: #252525;
   padding-top: 40px;
+  border-top: 5px solid @accent;
   margin-top: 30px;
+  padding-bottom: 30px;
+  .foot-logo {
+    text-align: center;
+    float: none;
+    margin-bottom: 30px;
+    #social-icons {
+      margin: 20px 0;
+      .common {
+        font-size: 33px;
+        color: @accent;
+        i {
+          background: black;
+          padding: 5px 0;
+          border-radius: 5px;
+        }
+        &:hover {
+          color: @onaccent;
+        }
+      }
+    }
+  }
+  .foot-col {
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+  }
   .footer-column {
+    .site-branding{
+      float: none;
+      #site-logo {
+        max-height: none;
+        margin-top: 10px;
+        margin-right: 10px;
+        img  {
+          max-height: none;
+          width: 150px;
+          height: auto;
+        }
+      }
+      #text-title-desc {
+        .site-title {
+          a {
+            color: @accent;
+            &:hover {
+              color: @onaccent;
+            }
+          }
+        }
+        .site-description {
+          color: #9f9f9f;
+          font-size: 25px;
+        }
+      }
+    }
     h1.widget-title {
       font-weight: bold;
       font-size: 18px;
       margin-top: 0;
       text-transform: uppercase;
-      color: black;
-      border-bottom: solid 1px #eee;
+      color: @onaccent;
       padding-bottom: 15px;
     }
     .widget_calendar{
@@ -37,12 +87,12 @@
         tbody {
           tr {
             td.pad{
-              background: @onaccent;
+              background: none;
               pointer-events: none;
             }
             td {
               background: @footer-bg;
-              border: 1px solid #fff;
+              border: 1px solid #252525;
               text-align: center;
               padding: 8px;
               &:hover {
@@ -63,10 +113,8 @@
       }
     }
     .widget {
-      color: darken(@content, 10%);
-      background: @background;
+      color: #9f9f9f;
       border-radius: 10px;
-      border: solid 1px darken(@background, 5%);
       padding: 15px;
       a {
         color: @content;
@@ -148,7 +196,7 @@
       -webkit-animation-direction: alternate;
       animation-direction: alternate;
     }
-    .widget_oxane_rp {
+    .widget_hunger_rp {
       li.rp-item {
         overflow: auto;
         clear: both;

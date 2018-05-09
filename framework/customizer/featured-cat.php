@@ -6,6 +6,7 @@ function hunger_customize_register_fp_cat( $wp_customize ) {
         array(
             'title'     => __('Featured Posts Categories','hunger'),
             'priority'  => 20,
+            'panel' => 'hunger_fc_panel',
         )
     );
 

@@ -1,6 +1,5 @@
-<?php if ( get_theme_mod('hunger_hero_enable') ) : ?>
+<?php if ( get_theme_mod('hunger_hero_enable') && is_home() ) : ?>
     <div id="hero" class="hero-content">
-        <div class="layer"></div>
 		<div class="container hero-container">
         <?php
             $args = array(

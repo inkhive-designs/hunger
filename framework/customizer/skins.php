@@ -27,9 +27,10 @@ function hunger_customize_register_skin($wp_customize){
         )
     );
 
-    $skins = array( 'default' => __('Default(hunger)','hunger'),
+    $skins = array( 'default' => __('Default(Hunger)','hunger'),
         'green' => __('Green','hunger'),
         'brown' => __('Brown', 'hunger'),
+        'yellow' => __('Yellow', 'hunger'),
     );
 
     $wp_customize->add_control(
@@ -44,7 +45,7 @@ function hunger_customize_register_skin($wp_customize){
     );
 
     function hunger_sanitize_skin( $input ) {
-        if ( in_array($input, array('default','orange','green', 'brown') ) )
+        if ( in_array($input, array('default', 'green', 'brown', 'yellow') ) )
             return $input;
         else
             return '';

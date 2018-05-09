@@ -16,19 +16,13 @@
     <?php get_sidebar('footer'); ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'hunger' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'hunger' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'hunger' ), 'hunger', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
+        <footer id="colophon" class="site-footer" role="contentinfo">
+            <div class="site-info container">
+                <?php printf( __( 'Powered by %1$s.', 'hunger' ), '<a href="'.esc_url("https://inkhive.com/product/hunger/").'" rel="nofollow">Hunger Theme</a>' ); ?>
+                <span class="sep"></span>
+                <?php echo ( esc_html(get_theme_mod('hunger_footer_text')) == '' ) ? ('&copy; '.date('Y').' '.get_bloginfo('name').__('. All Rights Reserved. ','hunger')) : esc_html( get_theme_mod('hunger_footer_text') ); ?>
+            </div><!-- .site-info -->
+        </footer><!-- #colophon -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

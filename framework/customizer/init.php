@@ -33,6 +33,7 @@ require_once get_template_directory().'/framework/customizer/featured-post.php';
 require_once get_template_directory().'/framework/customizer/featured_showcase.php';
 require_once get_template_directory().'/framework/customizer/front-page-builder.php';
 require_once get_template_directory().'/framework/customizer/_googlefonts.php';
+require_once get_template_directory().'/framework/customizer/skins.php';
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.

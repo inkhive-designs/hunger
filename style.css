@@ -1,23 +1,25 @@
-/*!
-Theme Name: hunger
-Theme URI: http://underscores.me/
-Author: Underscores.me
-Author URI: http://underscores.me/
-Description: Description
-Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
+/*
+Theme Name: Hunger
+Theme URI:  https://inkhive.com/product/hunger
+Author: InkHive
+Author URI: http://inkhive.com
+Description: Hunger is a unique, ultra creative multipurpose WordPress theme with complete support for WooCommerce. Hunger supports all basic features and is fully mobile friendly. And with Support for Custom Widgets, Slider and Featured Posts section, etc you can make this theme look even more beautiful on your website. Demo here -> http://demo.inkhive.com/hunger/
+Version: 1.3.8
+License: GNU General Public License v3
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: hunger
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: custom-background, two-columns, one-column, custom-colors, flexible-header, theme-options, right-sidebar, grid-layout, custom-menu, threaded-comments, translation-ready, featured-images, blog, full-width-template, e-commerce, footer-widgets, entertainment, photography, featured-image-header
+
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-hunger is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
+Hunger is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
 
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
 */
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:

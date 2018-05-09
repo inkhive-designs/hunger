@@ -5,6 +5,7 @@ function hunger_customize_register_fp_area($wp_customize) {
         array(
             'title'     => __('Featured Offers','hunger'),
             'priority'  => 10,
+            'panel'     => 'hunger_fc_panel'
         )
     );
 

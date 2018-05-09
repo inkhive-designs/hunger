@@ -2,10 +2,16 @@
   background: white;
   min-height:740px;
   margin: 70px 0;
+  @media screen and (max-width: 768px) {
+    background-image: none !important;
+    min-height: inherit;
+  }
   .showcase-box {
     text-align: center;
-    &:first-child, &:last-child {
-      margin-top: 140px;
+    @media screen and (min-width: 768px) {
+      &:first-child, &:last-child {
+        margin-top: 140px;
+      }
     }
     .showcase-image {
       img {
@@ -16,6 +22,10 @@
     .showcase-title{
       font-size: 20px;
       font-weight: 600;
+      color: @accent;
+    }
+    .showcase-desc {
+      color: @content;
     }
   }
 }

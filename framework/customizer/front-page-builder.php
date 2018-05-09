@@ -5,6 +5,7 @@ $wp_customize->add_section('hunger_hero1_section',
     array(
         'title' => __('HERO', 'hunger'),
         'priority' => 20,
+        'panel'     => 'hunger_fc_panel'
     )
 );
 

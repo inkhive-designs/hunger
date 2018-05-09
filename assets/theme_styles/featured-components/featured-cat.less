@@ -4,6 +4,9 @@
       font-size: 35px;
       text-align:left;
       margin: 17px 0;
+      @media screen and (max-width: 768px) {
+        text-align: center;
+      }
     }
   }
   .cat-top {
@@ -11,22 +14,34 @@
     border-bottom: 1px solid #ebebeb;
     margin: 30px 0;
     .item {
-      &:after {
-        content: "";
-        background-image: url("../../images/scooter.png");
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        bottom: 0;
-        left: 52px;
-        background-size: cover;
+      @media screen and (min-width: 768px) {
+        &:after {
+          content: "";
+          background-image: url("../../images/scooter.png");
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          bottom: 0;
+          left: 52px;
+          background-size: cover;
+        }
       }
       .post-cats {
         float:right;
+        @media screen and (max-width: 768px) {
+          text-align: center;
+          float: none;
+        }
         .cat-filter {
           padding: 30px 15px;
           display: inline-block;
           font-size: 17px;
+          @media screen and (max-width: 768px) {
+            border: 1px solid @accent;
+            border-radius: 15px;
+            padding: 10px 20px;
+            margin-bottom: 5px;
+          }
         }
       }
     }
@@ -36,11 +51,22 @@
     .categorized-posts {
       display: flex;
       flex-wrap: wrap;
-      .out-thumb {
-        h2 {
-          font-size: 18px;
+      .feat-thumb {
+        @media screen and (max-width: 768px) {
+          margin-bottom: 30px;
+        }
+        img {
+          @media screen and (max-width: 768px) {
+            width: 100%;
+          }
+        }
+        .out-thumb {
+          h2 {
+            font-size: 18px;
+          }
         }
       }
+
     }
   }
 }

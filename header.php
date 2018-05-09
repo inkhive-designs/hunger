@@ -19,6 +19,10 @@ get_template_part('modules/header/head'); ?>
 
     <?php get_template_part('modules/header/navigation', 'area'); ?>
 
+    <div class="mobile-menu">
+        <?php get_template_part('modules/navigation/mobile', 'navigation'); ?>
+    </div>
+
     <?php get_template_part('framework/featured-components/featured', 'offers'); ?>
 
     <?php get_template_part('framework/featured-components/featured', 'cat'); ?>

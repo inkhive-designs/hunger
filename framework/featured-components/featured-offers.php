@@ -32,10 +32,6 @@
                                     else: ?>
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/placeholder2.jpg" />
                                     <?php endif; ?>
-
-                                    <div class="offer-details">
-                                        <h3><?php the_title(); ?></h3>
-                                    </div>
                                 </div>
 
                             </a>

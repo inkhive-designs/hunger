@@ -1,4 +1,4 @@
-<?php if ( is_front_page() && get_theme_mod('hunger-showcase-blog') ) : ?>
+<?php if ( is_front_page() && get_theme_mod('hunger-showcase-blog') && is_home() ) : ?>
 
     <div class="section-title title-font">
         <?php echo get_theme_mod('hunger-showcase-title', ''); ?>
@@ -13,7 +13,7 @@
                 $surl	=	get_theme_mod('hunger-s-url'.$i);
                 ?>
 
-                <div class="showcase-box col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="showcase-box col-lg-3 col-md-3 col-sm-3 col-xs-6">
                     <?php if ( $simg  ) : ?>
                         <a href = "<?php echo $surl; ?>">
                             <div class="showcase-image"><img src="<?php echo $simg; ?>"></div>

@@ -1,4 +1,4 @@
-<?php if(get_theme_mod('hunger_eta_fcenable')): ?>
+<?php if(get_theme_mod('hunger_eta_fcenable') && is_home()): ?>
     <div id="featured-cat" class="container">
         <div class="cat-top">
 

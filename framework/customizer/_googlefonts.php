@@ -9,19 +9,19 @@ function hunger_customize_register_googlefonts($wp_customize){
         )
     );
 
-    $font_array = array('Hind','Raleway','Khula','Open Sans','Droid Sans','Droid Serif','Roboto','Roboto Condensed','Lato','Bree Serif','Oswald','Slabo','Lora','Source Sans Pro','Arimo','Bitter','Noto Sans');
+    $font_array = array('Nunito','Hind','Raleway','Khula','Open Sans','Droid Sans','Droid Serif','Roboto','Roboto Condensed','Lato','Bree Serif','Oswald','Slabo','Lora','Source Sans Pro','Arimo','Bitter','Noto Sans');
     $fonts = array_combine($font_array, $font_array);
 
     $wp_customize->add_setting(
         'hunger_title_font',
         array(
-            'default'=> 'Raleway',
+            'default'=> 'Nunito',
             'sanitize_callback' => 'hunger_sanitize_gfont'
         )
     );
 
     function hunger_sanitize_gfont( $input ) {
-        if ( in_array($input, array('Hind','Raleway','Khula','Open Sans','Droid Sans','Droid Serif','Roboto','Roboto Condensed','Lato','Bree Serif','Oswald','Slabo','Lora','Source Sans Pro','Arimo','Bitter','Noto Sans') ) )
+        if ( in_array($input, array('Nunito','Hind','Raleway','Khula','Open Sans','Droid Sans','Droid Serif','Roboto','Roboto Condensed','Lato','Bree Serif','Oswald','Slabo','Lora','Source Sans Pro','Arimo','Bitter','Noto Sans') ) )
             return $input;
         else
             return '';

@@ -61,6 +61,7 @@ if ( ! function_exists( 'hunger_setup' ) ) :
         register_nav_menus( array(
             'primary' => __( 'Primary Menu', 'hunger' ),
             'short' => __( 'Short Menu', 'hunger' ),
+            'mobile' => __( 'Mobile Menu', 'adviso' ),
         ) );
 
         /*

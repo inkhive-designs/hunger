@@ -18,8 +18,6 @@ function hunger_scripts() {
 
     wp_enqueue_style( 'hunger-main-theme-style', get_template_directory_uri() . '/assets/theme_styles/css/'.get_theme_mod('hunger_skin', 'default').'.css', array(), null );
 
-    wp_enqueue_script( 'hunger-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-
     wp_enqueue_script( 'hunger-external', get_template_directory_uri() . '/js/external.js', array('jquery'), '20120206', true );
 
     wp_enqueue_script( 'hunger-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );

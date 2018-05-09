@@ -1,0 +1,66 @@
+.error-404 {
+  width: 100%;
+  .page-header {
+    text-align: center;
+    h2 {
+      font-size: 90px;
+      font-weight: 600;
+      color: #9b9696;
+      i {
+        margin-right: 10px;
+        color: #f7f73b;
+      }
+    }
+    h1 {
+      font-size: 40px;
+    }
+  }
+  .page-content {
+    text-align: center;
+    p {
+      font-size: 25px;
+    }
+  }
+  .search {
+    margin: 60px 0;
+    text-align: center;
+    label {
+      width: 50%;
+      input {
+        width: 100%;
+        padding: 12px;
+      }
+    }
+    input.search-submit {
+      font-size: 15px;
+      width: 115px;
+      padding: 14px;
+      color: @onaccent;
+      background: @accent;
+      border: 1px solid transparent;
+      .transition(0.3 all ease);
+      &:hover {
+        color: @accent;
+        background: @onaccent;
+        border: 1px solid @accent;
+      }
+    }
+  }
+}
+
+#secondary {
+   .widget {
+     border: 1px solid grey;
+     padding: 20px;
+   }
+  .widget_archive {
+    select {
+      padding: 10px;
+      color: @content;
+      width: 100%;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

@@ -28,7 +28,7 @@
             <span class="entry-excerpt">
                 <?php echo substr(get_the_excerpt(), 0, 170)."..."; ?>
             </span>
-            <span class="readmore"><a href="<?php the_permalink() ?>"><?php _e('Read More','hunger'); ?></a></span>
+            <a class="readmore" href="<?php the_permalink() ?>"><?php _e('Read More','hunger'); ?></a></>
         </div>
 
     </div>

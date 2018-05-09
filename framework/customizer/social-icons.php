@@ -40,16 +40,16 @@ function hunger_customize_register_social_icons($wp_customize){
     );
 
     $social_networks = array( //Redefinied in Sanitization Function.
-        'none' => __('-','hunger'),
-        'facebook' => __('Facebook','hunger'),
-        'twitter' => __('Twitter','hunger'),
-        'google-plus' => __('Google Plus','hunger'),
-        'instagram' => __('Instagram','hunger'),
-        'rss' => __('RSS Feeds','hunger'),
-        'vine' => __('Vine','hunger'),
-        'vimeo-square' => __('Vimeo','hunger'),
-        'youtube' => __('Youtube','hunger'),
-        'flickr' => __('Flickr','hunger'),
+        'none' => __('-','plum'),
+					'facebook' => __('Facebook','plum'),
+					'twitter' => __('Twitter','plum'),
+					'google-plus-g' => __('Google Plus','plum'),
+					'instagram' => __('Instagram','plum'),
+					'vine' => __('Vine','plum'),
+					'vimeo-v' => __('Vimeo','plum'),
+					'youtube' => __('Youtube','plum'),
+					'flickr' => __('Flickr','plum'),
+					'pinterest-p'	=> __('Pinterest', 'plum'),
     );
 
     $social_count = count($social_networks);
@@ -90,13 +90,13 @@ function hunger_customize_register_social_icons($wp_customize){
             'none' ,
             'facebook',
             'twitter',
-            'google-plus',
+            'google-plus-g',
             'instagram',
-            'rss',
             'vine',
-            'vimeo-square',
+            'vimeo-v',
             'youtube',
-            'flickr'
+            'flickr',
+            'pinterest-p',
         );
         if ( in_array($input, $social_networks) )
             return $input;
