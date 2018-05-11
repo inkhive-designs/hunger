@@ -4,7 +4,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('grid grid_2_column hunger col-md-6 col-sm-6 col-xs-6'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('grid grid_2_column hunger col-md-6 col-sm-6 col-xs-12'); ?>>
 
 
     <div class="featured-thumb col-md-12 col-sm-12">
