@@ -1,0 +1,116 @@
+/**
+ * Buttons
+ */
+.woocommerce {
+  a.button,
+  button.button,
+  input.button,
+  #respond input#submit {
+    font-size: 100%;
+    margin: 0;
+    line-height: 1;
+    cursor: pointer;
+    position: relative;
+    font-family: inherit;
+    text-decoration: none;
+    overflow: visible;
+    padding: .618em 1em;
+    font-weight: 700;
+    border-radius: 3px;
+    left: auto;
+    color: @content;
+    background-color: darken(@background,8%);
+    border: 0;
+    white-space: nowrap;
+    display: inline-block;
+    background-image: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    text-shadow: none;
+
+    &.loading {
+      opacity: 0.25;
+      padding-right: 2.618em;
+
+      &:after {
+        font-family: "FontAwesome";
+        content: "\f110";
+        margin-left: .53em;
+        vertical-align: bottom;
+        -webkit-animation: spin 2s linear infinite;
+        -moz-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+      }
+    }
+
+    &.added {
+      &:after {
+        font-family: 'FontAwesome';
+        content: "\f00c";
+        margin-left: .53em;
+        vertical-align: bottom;
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+      background-image: none;
+      color: @content;
+    }
+
+    &.alt {
+      background-color: @accent;
+      color: @content;
+      -webkit-font-smoothing: antialiased;
+
+      &:hover {
+        color: @content;
+      }
+
+      &.disabled,
+      &:disabled,
+      &:disabled[disabled],
+      &.disabled:hover,
+      &:disabled:hover,
+      &:disabled[disabled]:hover {
+        background-color: @accent;
+        color: @content;
+      }
+    }
+
+    &:disabled,
+    &.disabled,
+    &:disabled[disabled] {
+      color: inherit;
+      cursor: not-allowed;
+      opacity: 0.5;
+
+      &:hover {
+        color: inherit;
+        background-color: @content;
+      }
+    }
+  }
+
+  .cart .button,
+  .cart input.button {
+    float: none;
+  }
+
+  a.added_to_cart {
+    margin-top: 5px;
+    background: darken(@background,15%);
+    color: darken(@content,5%);
+    padding: 5px 13px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    display: inline-block;
+    .transition(0.4s all ease);
+    &:hover {
+      background: darken(@accent,0%);
+      color: @onaccent;
+    }
+  }
+}

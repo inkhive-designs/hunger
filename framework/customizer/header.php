@@ -1,7 +1,7 @@
 <?php
 
 function hunger_customize_register_header($wp_customize){
-    $wp_customize->remove_control('display_header_text');
+    //$wp_customize->remove_control('display_header_text');
     $wp_customize->get_section('title_tagline')->panel = 'hunger_header_panel';
     //Logo Setting
     $wp_customize->add_panel('hunger_header_panel', array(
@@ -80,24 +80,24 @@ function hunger_customize_register_header($wp_customize){
 
     //Settings For Logo Area
 
-    $wp_customize->add_setting(
-        'hunger_hide_title_tagline',
-        array( 'sanitize_callback' => 'hunger_sanitize_checkbox' )
-    );
-
-    $wp_customize->add_control(
-        'hunger_hide_title_tagline', array(
-            'settings' => 'hunger_hide_title_tagline',
-            'label'    => __( 'Hide Title and Tagline.', 'hunger' ),
-            'section'  => 'title_tagline',
-            'type'     => 'checkbox',
-        )
-    );
-
-    function hunger_title_visible( $control ) {
-        $option = $control->manager->get_setting('hunger_hide_title_tagline');
-        return $option->value() == false ;
-    }
+//    $wp_customize->add_setting(
+//        'hunger_hide_title_tagline',
+//        array( 'sanitize_callback' => 'hunger_sanitize_checkbox' )
+//    );
+//
+//    $wp_customize->add_control(
+//        'hunger_hide_title_tagline', array(
+//            'settings' => 'hunger_hide_title_tagline',
+//            'label'    => __( 'Hide Title and Tagline.', 'hunger' ),
+//            'section'  => 'title_tagline',
+//            'type'     => 'checkbox',
+//        )
+//    );
+//
+//    function hunger_title_visible( $control ) {
+//        $option = $control->manager->get_setting('hunger_hide_title_tagline');
+//        return $option->value() == false ;
+//    }
 
 }
 add_action('customize_register','hunger_customize_register_header');

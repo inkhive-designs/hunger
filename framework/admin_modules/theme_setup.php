@@ -85,6 +85,9 @@ if ( ! function_exists( 'hunger_setup' ) ) :
         add_image_size('hunger-thumb',670, 430, true );
         add_image_size('offer-thumb',300, 300, true );
         add_image_size('hunger-slider-thumb',910, 430, true );
+
+        //Declare woocommerce support
+        add_theme_support('woocommerce');
     }
 endif; // hunger_setup
 add_action( 'after_setup_theme', 'hunger_setup' );
